@@ -1,0 +1,42 @@
+
+.container {
+    display: none;
+    margin: 40px auto;
+    padding: 40px;
+    width: 450px;
+    background-color: var(--primary-bg-color);
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px var(--shadow-color1), -10px -10px 20px var(--shadow-color2); /* Gunmetal */
+}
+.container h2{
+    margin: 0 auto 40px auto;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+}
+.resulting_div{
+    width: 90%;
+    padding: 10px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--primary-bg-color);
+    box-shadow: inset 5px 5px 10px var(--shadow-color1), inset -5px -5px 10px var(--shadow-color2);
+    display: block;
+}
+
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    background-color: var(--primary-bg-color);
+    box-shadow: inset 5px 5px 10px var(--shadow-color1), inset -5px -5px 10px var(--shadow-color2); /* Neumorphism inset effect */
+    border-radius: 10px;
+}
+
+ul li {
+    font-size: 16px;
+    margin: 5px 0;
+    padding: 10px; 
+}
+

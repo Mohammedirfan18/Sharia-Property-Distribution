@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sharia Inheritance Calculator</title>
+    <link rel="stylesheet" href="./CSS/styles.css" />
+    <link rel="stylesheet" href="./CSS/result-styles.css" />
+  </head>
+  <body>
+    <form>
+      <h2>Sharia Based Property Distribution</h2>
+
+      <p>Whose property is it?</p>
+      <div class="property-buttons">
+        <input
+          type="radio"
+          id="husband"
+          name="propertyOwner"
+          value="husband"
+          required
+        />
+        <label for="husband" class="property-button">Husband</label>
+
+        <input
+          type="radio" 
+          id="wife" 
+          name="propertyOwner" 
+          value="wife" 
+          required />
+        <label for="wife" class="property-button">Wife</label>
+      </div>
+
+      <label for="value">Total Property Value</label>
+      <input type="number" id="value" name="propertyValue" required/>
+
+      <label for="sons">Number of Sons</label>
+      <input type="number" id="sons" name="numberOfSons" required/>
+
+      <label for="daughters">Number of Daughters</label>
+      <input type="number" id="daughters" name="numberOfDaughters" required/>
+
+      <label for="burial">Burial Expenses</label>
+      <input type="number" id="burial" name="burialAmount" required/>
+
+      <label for="loan">Loan Amount</label>
+      <input type="number" id="loan" name="loanAmount" required/>
+
+      <p>Is spouse alive?</p>
+      <div class="spouse-buttons">
+        <input
+          type="radio"
+          id="spouse_alive"
+          name="spouseAlive"
+          value="yes"
+          required
+        />
+        <label for="spouse_alive" class="spouse-button">Yes</label>
+
+        <input
+          type="radio"
+          id="spouse_dead"
+          name="spouseAlive"
+          value="no"
+          required
+        />
+        <label for="spouse_dead" class="spouse-button">No</label>
+      </div>
+
+      <p>Is father alive?</p>
+      <div class="father-buttons">
+        <input
+          type="radio"
+          id="father_alive"
+          name="fatherAlive"
+          value="yes"
+          required
+        />
+        <label for="father_alive" class="father-button">Yes</label>
+
+        <input
+          type="radio"
+          id="father_dead"
+          name="fatherAlive"
+          value="no"
+          required
+        />
+        <label for="father_dead" class="father-button">No</label>
+      </div>
+
+      <p>Is mother alive?</p>
+      <div class="mother-buttons">
+        <input
+          type="radio"
+          id="mother_alive"
+          name="motherAlive"
+          value="yes"
+          required
+        />
+        <label for="mother_alive" class="mother-button">Yes</label>
+
+        <input
+          type="radio"
+          id="mother_dead"
+          name="motherAlive"
+          value="no"
+          required
+        />
+        <label for="mother_dead" class="mother-button">No</label>
+      </div>
+
+      <label for="brothers">Number of Brothers</label>
+      <input type="number" id="brothers" name="numberOfBrothers" required/>
+
+      <label for="sisters">Number of Sisters</label>
+      <input type="number" id="sisters" name="numberOfSisters" required/>
+
+      <button class="submitbtn" type="submit" value="save">Calculate Inheritance</button>
+    </form>
+    <div class="container">
+      <h2>Sharia Based Property Distribution</h2>
+      <div>
+        <p>Total Property Value:</p>
+        <div id="propertyValue" class="resulting_div"></div>
+      </div>
+      <div>
+        <p>Burial Expenses:</p>
+        <div id="burialAmount" class="resulting_div"></div>
+      </div>
+      <div>
+        <p>Loan Deductions:</p>
+        <div id="loanAmount" class="resulting_div"></div>
+      </div>
+      <div>
+        <p>Remaining Property to be Distributed:</p>
+        <div id="remainingProperty" class="resulting_div"></div>
+      </div>
+      <div>
+        <p>Number of Sons:</p>
+        <div id="noOfSons" class="resulting_div"></div>
+      </div>
+      <div>
+        <p>Number of Daughters:</p>
+        <div id="noOfDaughters" class="resulting_div"></div>
+      </div>
+      <div>
+        <p>Property Owner:</p>
+        <div id="propertyOwner" class="resulting_div"></div>
+      </div>
+      <div>
+        <p>Each Son's Share:</p>
+        <div id="sonShare"class="resulting_div"></div>
+      </div>
+      <div>
+        <p>Each Daughter's Share:</p>
+        <div id="daughterShare" class="resulting_div"></div>
+      </div>
+      <div>
+        <p>Spouse Share:</p>
+        <div id="spouseShare"class="resulting_div"></div>
+      </div>
+      <div>
+        <p>Mother's Share:</p>
+        <div id="motherShare"class="resulting_div"></div>
+      </div>
+      <div>
+        <p>Father's Share:</p>
+        <div id="fatherShare"class="resulting_div"></div>
+      </div>
+      <div>
+        <p>Each Brother's Share:</p>
+        <div id="brotherShare"class="resulting_div"></div>
+      </div>
+      <div>
+        <p>Each Sister's Share:</p>
+        <div id="sisterShare" class="resulting_div"></div>
+      </div>
+
+      <h3>Additional Notes:</h3>
+      <ul>
+        <li>The spouse gets 1/8th of the amount.</li>
+        <li>The parents each get 1/6th of the amount.</li>
+        <li>
+          The son(s) inherit 1/4th of the amount after the parents and wife have
+          taken their share.
+        </li>
+        <li>The daughter(s) inherit half of what the sons do.</li>
+      </ul>
+      <button class="backToForm">Go back to form</button>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
